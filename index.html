@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Note App</title>
+  </head>
+  <body>
+    <div class="app">
+      <label class="header-search-icon" for="search">
+        <span class="search-icon"
+          ><img src="images/search-icon.png" alt="search icon"
+        /></span>
+        <span class="cross-icon"
+          ><img src="images/icon-cross.svg" alt="cross icon"
+        /></span>
+      </label>
+      <input class="header-search-checkbox" id="search" type="checkbox" />
+      <label class="burger-menu" for="menu">
+        <div class="burger-menu__bar"></div>
+        <div class="burger-menu__bar"></div>
+        <div class="burger-menu__bar"></div>
+      </label>
+      <input id="menu" class="burger-menu__checkbox" type="checkbox" />
+      <nav class="nav">
+        <div class="nav-content">
+          <div class="heading-box">
+            <h1 class="main-heading">Almdrasa-Notes</h1>
+          </div>
+          <div class="input-search-box">
+            <input class="input-search" type="search" placeholder="Search" />
+          </div>
+          <div class="nav-links">
+            <button class="nav-btn notes-btn">Notes</button>
+            <button class="nav-btn add-btn">Add Note</button>
+          </div>
+        </div>
+      </nav>
+      <section class="section">
+        <img class="view-cross" src="images/icon-cross.svg" alt="cross icon" />
+        <div class="notes notes-container">
+          <img
+            class="arrow-icon"
+            src="images/arrow-icon.png"
+            alt="arrow icon"
+          />
+          <div class="archive-notes">
+            <h2 class="pinned-heading">PINNED</h2>
+            <ul class="pinned-list"></ul>
+
+            <h2 class="note-heading">Notes</h2>
+            <ul class="notes-list"></ul>
+          </div>
+
+          <div class="view-notes">
+            <h3 class="view-title">👨‍💻 Frontend Developer (React.js)</h3>
+            <div class="view-box">
+              <span class="view-date">Mar 5, 2024</span>
+              <span class="view-author">/ By Ahmed Ali</span>
+            </div>
+            <p class="view-note">
+              💻The Note App is a simple application that allows users to create
+              and manage text-based notes. Users can add new notes by entering a
+              title, author, and the actual note content. The app provides the
+              ability to pin important notes, view details of each note, and
+              delete notes when needed. Additionally, there is a search
+              functionality that enables users to find specific notes based on
+              the title. The interface is designed to be user-friendly, making
+              it easy for individuals to organize and access their notes
+              effortlessly.
+            </p>
+          </div>
+          <img
+            class="plus-icon"
+            src="images/plus-icon.png"
+            alt="plus icon"
+            role="button"
+          />
+        </div>
+
+        <div class="add-note container">
+          <h2 class="add-heading">Add Note</h2>
+          <form class="form">
+            <label class="label" for="title">Title*</label>
+            <input class="input input-title" id="title" type="text" required />
+            <label class="label" for="Author">Author*</label>
+            <input
+              class="input input-Author"
+              id="Author"
+              type="text"
+              required
+            />
+            <label class="label" for="note">Your Note*</label>
+            <textarea
+              class="input input-note"
+              id="note"
+              cols="30"
+              rows="10"
+              required
+            ></textarea>
+            <div class="action-btns">
+              <button type="submit" class="action-btn action-btn--add">
+                Add Note
+              </button>
+              <button type="submit" class="action-btn action-btn--pinned">
+                Add pinned note
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
